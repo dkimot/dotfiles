@@ -36,6 +36,15 @@ return require("packer").startup(function(use)
   use("nvim-tree/nvim-tree.lua")
   use("tpope/vim-fugitive")
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup()
+    end
+  }
+
   -- Language specific tooling
   use("tpope/vim-rails")
 

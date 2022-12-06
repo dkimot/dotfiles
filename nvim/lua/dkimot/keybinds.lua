@@ -15,6 +15,12 @@ nnoremap("<leader>fh", tel_builtin.help_tags, {})
 
 nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
 
+-- ===== hop =====
+nnoremap("<leader><leader>b", "<cmd>HopWordBC<CR>")
+nnoremap("<leader><leader>w", "<cmd>HopWordAC<CR>")
+nnoremap("<leader><leader>j", "<cmd>HopLineAC<CR>")
+nnoremap("<leader><leader>k", "<cmd>HopLineBC<CR>")
+
 -- ===== undotree =====
 nnoremap("<Leader>u", ":UndotreeToggle<CR>")
 
