@@ -32,7 +32,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.foldmethod = "indent"
-vim.opt.foldlevel = 99
+vim.opt.foldlevel = 1
 
 -- Give more space for displaying messages.
 vim.opt.cmdheight = 1
