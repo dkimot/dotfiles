@@ -1,4 +1,5 @@
 local nnoremap = require('dkimot.keymap').nnoremap
+local vnoremap = require('dkimot.keymap').vnoremap
 
 -- ===== window management =====
 nnoremap("<Leader>h", ":wincmd h<CR>")
@@ -20,6 +21,11 @@ nnoremap("<leader><leader>b", "<cmd>HopWordBC<CR>")
 nnoremap("<leader><leader>w", "<cmd>HopWordAC<CR>")
 nnoremap("<leader><leader>j", "<cmd>HopLineAC<CR>")
 nnoremap("<leader><leader>k", "<cmd>HopLineBC<CR>")
+
+vnoremap("<leader><leader>b", "<cmd>HopWordBC<CR>")
+vnoremap("<leader><leader>w", "<cmd>HopWordAC<CR>")
+vnoremap("<leader><leader>j", "<cmd>HopLineAC<CR>")
+vnoremap("<leader><leader>k", "<cmd>HopLineBC<CR>")
 
 -- ===== undotree =====
 nnoremap("<Leader>u", ":UndotreeToggle<CR>")
