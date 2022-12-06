@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
