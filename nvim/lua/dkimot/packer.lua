@@ -28,6 +28,10 @@ return require("packer").startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use('nvim-tree/nvim-web-devicons')
+  use({
+    'mrjones2014/dash.nvim',
+    run = 'make install',
+  })
 
   use('gpanders/editorconfig.nvim')
 
