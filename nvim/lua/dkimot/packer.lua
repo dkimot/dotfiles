@@ -24,6 +24,8 @@ return require("packer").startup(function(use)
   }
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
