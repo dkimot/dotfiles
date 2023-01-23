@@ -54,9 +54,10 @@ return require("packer").startup(function(use)
 
   -- Language specific tooling
   use("tpope/vim-rails")
+  use("ray-x/go.nvim")
 
   -- Colorscheme
-  use("gruvbox-community/gruvbox")
+  use("luisiacc/gruvbox-baby")
 
   use {
         'nvim-treesitter/nvim-treesitter',

@@ -10,6 +10,7 @@ require("dkimot.keybinds")
 -- require("dkimot.neogit")
 -- require("dkimot.debugger")
 require("dkimot.lsp")
+require("dkimot.treesitter")
 require("dkimot.projectnav")
 
 vim.g.netrw_browse_split = 0

@@ -3,6 +3,10 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 lsp.setup()
 
+vim.diagnostic.config({
+  virtual_text = true,
+})
+
 local null_ls = require('null-ls')
 local null_opts = lsp.build_options('null-ls', {})
 
