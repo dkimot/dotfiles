@@ -42,6 +42,8 @@ return require("packer").startup(function(use)
   use("jeetsukumaran/vim-buffergator")
   use("nvim-tree/nvim-tree.lua")
   use("tpope/vim-fugitive")
+  use("natecraddock/sessions.nvim")
+  use("natecraddock/workspaces.nvim")
 
   use {
     'phaazon/hop.nvim',

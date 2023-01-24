@@ -13,6 +13,7 @@ require('telescope').setup{
 }
 
 require('nvim-tree').setup {
+  update_cwd = true,
   view = {
     adaptive_size = true
   },
@@ -22,3 +23,12 @@ require('nvim-tree').setup {
     }
   }
 }
+
+require('sessions').setup()
+require('workspaces').setup({
+  hooks = {
+    open = function()
+      require("sessions").load('.session', { silent = true })
+    end,
+  }
+})

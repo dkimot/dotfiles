@@ -195,6 +195,11 @@ _G.packer_plugins = {
     path = "/Users/daviskimoto/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["sessions.nvim"] = {
+    loaded = true,
+    path = "/Users/daviskimoto/.local/share/nvim/site/pack/packer/start/sessions.nvim",
+    url = "https://github.com/natecraddock/sessions.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/daviskimoto/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -219,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/daviskimoto/.local/share/nvim/site/pack/packer/start/vim-rails",
     url = "https://github.com/tpope/vim-rails"
+  },
+  ["workspaces.nvim"] = {
+    loaded = true,
+    path = "/Users/daviskimoto/.local/share/nvim/site/pack/packer/start/workspaces.nvim",
+    url = "https://github.com/natecraddock/workspaces.nvim"
   }
 }
 
