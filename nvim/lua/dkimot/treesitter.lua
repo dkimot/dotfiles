@@ -6,13 +6,13 @@
     -- parser_install_dir = "/some/path/to/store/parsers",
 
     -- A list of parser names, or "all"
-    ensure_installed = { "c", "lua", "vim", "help", "go", "ruby", "typescript" },
+    ensure_installed = { "c", "lua", "vim", "help", "go", "ruby", "rust", "typescript" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
 
     -- Automatically install missing parsers when entering buffer
-    auto_install = true,
+    -- auto_install = true,
 
     -- List of parsers to ignore installing (for "all")
     -- ignore_install = { "javascript" },
@@ -22,7 +22,7 @@
       enable = true,
 
       -- list of language that will be disabled
-      -- disable = { "c", "rust" },
+      -- disable = { "embedded_template", "html" },
 
       -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
       -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).

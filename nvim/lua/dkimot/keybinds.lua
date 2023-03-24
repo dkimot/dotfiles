@@ -14,7 +14,7 @@ nnoremap("<leader>fg", tel_builtin.live_grep, {})
 nnoremap("<leader>fb", tel_builtin.buffers, {})
 nnoremap("<leader>fh", tel_builtin.help_tags, {})
 
-nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
+nnoremap("<leader>n", ":NvimTreeFindFileToggle<CR>")
 
 -- ===== hop =====
 nnoremap("<leader><leader>b", "<cmd>HopWordBC<CR>")

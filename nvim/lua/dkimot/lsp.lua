@@ -1,10 +1,29 @@
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
+
+lsp.setup_nvim_cmp({
+  sources = {
+    {name = 'path'},
+    {name = 'nvim_lsp', keyword_length = 1},
+    {name = 'buffer', keyword_length = 3},
+    {name = 'luasnip', keyword_length = 2},
+  }
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
   virtual_text = true,
+})
+
+require('tabnine').setup({
+  disable_auto_comment=true,
+  accept_keymap="<C-Enter>",
+  dismiss_keymap = "<C-]>",
+  debounce_ms = 800,
+  suggestion_color = {gui = "#808080", cterm = 244},
+  execlude_filetypes = {"TelescopePrompt"}
 })
 
 local null_ls = require('null-ls')

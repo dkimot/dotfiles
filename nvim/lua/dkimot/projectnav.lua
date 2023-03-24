@@ -32,3 +32,14 @@ require('workspaces').setup({
     end,
   }
 })
+
+require('dash').setup({
+  file_type_keywords = {
+    -- a table of strings will search on multiple keywords
+    ruby = { 'ruby', 'rails', 'rubygems' },
+    javascript = { 'javascript', 'nodejs' },
+    typescript = { 'typescript', 'javascript', 'nodejs' },
+    typescriptreact = { 'typescript', 'javascript', 'react' },
+    javascriptreact = { 'javascript', 'react' },
+  }
+})

@@ -22,7 +22,7 @@ return require("packer").startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 
   use { 'jose-elias-alvarez/null-ls.nvim' }
 
@@ -42,8 +42,6 @@ return require("packer").startup(function(use)
   use("jeetsukumaran/vim-buffergator")
   use("nvim-tree/nvim-tree.lua")
   use("tpope/vim-fugitive")
-  use("natecraddock/sessions.nvim")
-  use("natecraddock/workspaces.nvim")
 
   use {
     'phaazon/hop.nvim',
