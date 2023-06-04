@@ -24,15 +24,6 @@ require('nvim-tree').setup {
   }
 }
 
-require('sessions').setup()
-require('workspaces').setup({
-  hooks = {
-    open = function()
-      require("sessions").load('.session', { silent = true })
-    end,
-  }
-})
-
 require('dash').setup({
   file_type_keywords = {
     -- a table of strings will search on multiple keywords
