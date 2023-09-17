@@ -17,10 +17,9 @@ opt.smartcase = true
 -- cursor line
 opt.cursorline = true
 
-
 -- appearance
 
--- turn on termguicolors for nightfly colorscheme to work
+-- turn on termguicolors
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -34,5 +33,8 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- window management
 opt.splitright = true
 opt.splitbelow = true
+
+opt.scrolloff = 6
+opt.sidescrolloff = 8
 
 opt.swapfile = false
