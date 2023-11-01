@@ -50,6 +50,8 @@ return {
 				-- auto install above language parsers
 				auto_install = true,
 			})
+
+			vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
 		end,
 	},
 }
