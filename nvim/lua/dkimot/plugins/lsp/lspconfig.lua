@@ -120,6 +120,13 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["sorbet"].setup({
+			cmd = { "bundle", "exec", "srb", "tc", "--lsp" },
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "ruby", "erb" },
+		})
+
 		-- configure ruby server
 		lspconfig["ruby_ls"].setup({
 			capabilities = capabilities,
