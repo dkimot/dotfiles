@@ -6,6 +6,11 @@ local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps --
 
+keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Move focus left" })
+keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Move focus right" })
+keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Move focus up" })
+keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Move focus down" })
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -13,11 +18,6 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "x", '"_x')
 
 keymap.set("n", ";", ":")
-
--- bufferline tools
-keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
-keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
-keymap.set("n", "<leader>x", "<cmd>bd<cr>", { desc = "Close current buffer" })
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
