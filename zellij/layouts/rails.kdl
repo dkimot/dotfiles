@@ -1,7 +1,7 @@
 layout {
   pane split_direction="vertical" {
     pane split_direction="horizontal" size="35%" {
-      pane name="terminal" size="25%"
+      pane name="terminal" size="22%"
 
       pane {
         name "guard"
@@ -9,8 +9,13 @@ layout {
         args "exec" "guard"
       }
 
-      pane command="./bin/dev" size="20%" {
+      pane command="./bin/dev" size="17%" {
         start_suspended true
+      }
+      pane size="5%" borderless=true {
+        name "tunnel"
+        command "dev"
+        args "tunnel"
       }
     }
 
