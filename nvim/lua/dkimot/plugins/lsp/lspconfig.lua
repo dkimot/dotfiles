@@ -133,12 +133,9 @@ return {
     }
 
     -- configure ruby server
-    lspconfig["ruby_ls"].setup {
+    lspconfig["ruby_lsp"].setup {
       capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.semanticTokensProvider = nil
-      end,
+      on_attach = on_attach,
       filetypes = { "ruby", "erb" },
     }
 
