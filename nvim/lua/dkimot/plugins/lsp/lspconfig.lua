@@ -142,6 +142,17 @@ return {
       filetypes = { "ruby", "erb" },
     }
 
+    lspconfig["rust_analyzer"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["elixirls"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      cmd = { "/Users/daviskimoto/.elixir-ls/release/language_server.sh" },
+    }
+
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup {
       capabilities = capabilities,

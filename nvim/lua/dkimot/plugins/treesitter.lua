@@ -30,6 +30,8 @@ return {
           "yaml",
           "html",
           "css",
+          "elixir",
+          "heex",
           "prisma",
           "markdown",
           "markdown_inline",

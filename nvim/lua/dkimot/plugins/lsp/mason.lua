@@ -38,7 +38,9 @@ return {
         "prismals",
         "pyright",
         "ruby_ls",
+        "rust_analyzer",
         "sorbet",
+        "elixirls",
       },
 
       -- auto-install configured servers (with lspconfig)
