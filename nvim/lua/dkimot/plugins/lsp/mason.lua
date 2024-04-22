@@ -37,7 +37,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
-        "ruby_ls",
+        "ruby_lsp",
         "rust_analyzer",
         "sorbet",
         "elixirls",
