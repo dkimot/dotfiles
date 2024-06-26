@@ -114,6 +114,14 @@ return {
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     }
 
+    lspconfig["gdscript"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      },
+    }
+
     -- configure python server
     lspconfig["pyright"].setup {
       capabilities = capabilities,
