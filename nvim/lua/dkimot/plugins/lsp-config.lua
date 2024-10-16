@@ -72,95 +72,61 @@ return {
 
     -- configure html server
     lspconfig["html"].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    -- configure typescript server with plugin
-    lspconfig["tsserver"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
     }
 
     -- configure css server
     lspconfig["cssls"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
     }
 
     -- configure tailwindcss server
     lspconfig["tailwindcss"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
     }
 
     -- configure prisma orm server
     lspconfig["prismals"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
-    }
-
-    -- configure graphql language server
-    lspconfig["graphql"].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
     }
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     }
 
-    lspconfig["gdscript"].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-    }
-
-    -- configure python server
-    lspconfig["pyright"].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
     lspconfig["gopls"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
-    }
-
-    lspconfig["sorbet"].setup {
-      cmd = { "bundle", "exec", "srb", "tc", "--lsp" },
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "ruby", "erb" },
     }
 
     -- configure ruby server
     lspconfig["ruby_lsp"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "ruby", "erb" },
     }
 
     lspconfig["rust_analyzer"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
     }
 
-    lspconfig["elixirls"].setup {
+    lspconfig.lexical.setup {
+      -- cmd = { "/Users/daviskimoto/.elixir-ls/release/language_server.sh" },
+      cmd = { "/Users/daviskimoto/.local/share/nvim/mason/bin/lexical" },
       capabilities = capabilities,
       on_attach = on_attach,
-      cmd = { "/Users/daviskimoto/.elixir-ls/release/language_server.sh" },
+      root_dir = function(fname)
+        return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.cwd()
+      end,
+      filetypes = { "elixir", "eelixir", "heex" },
+    }
+
+    lspconfig["marksman"].setup {
+      on_attach = on_attach,
     }
 
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       settings = { -- custom settings for lua
         Lua = {

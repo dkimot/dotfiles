@@ -1,6 +1,6 @@
 layout {
   pane split_direction="vertical" {
-    pane split_direction="horizontal" size="35%" {
+    pane split_direction="horizontal" size="30%" {
       pane name="terminal"
 
       pane size="25%" {

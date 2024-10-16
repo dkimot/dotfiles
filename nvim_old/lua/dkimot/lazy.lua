@@ -13,6 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "dkimot.plugins" },
+  { import = "dkimot.plugins.lsp" },
+  { import = "dkimot.plugins.langs" },
 }, {
   install = {
     colorscheme = { "gruvbox" },

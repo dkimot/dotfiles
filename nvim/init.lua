@@ -1,2 +1,3 @@
-require("dkimot.core")
-require("dkimot.lazy")
+require "dkimot.core"
+require "dkimot.colors"
+require "dkimot.lazy"
